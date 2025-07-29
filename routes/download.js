@@ -5,4 +5,6 @@ const validateUrl = require('../middlewares/validateUrl');
 
 router.post('/', validateUrl, downloadController.handleDownload);
 
+router.get('/file', downloadController.streamFile);
+
 module.exports = router;
